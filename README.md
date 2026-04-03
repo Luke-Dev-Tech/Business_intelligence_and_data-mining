@@ -14,6 +14,7 @@ The project uses the "Customer Personality Analysis" dataset from Kaggle.com, co
 *   **Spending Behavior:** Amount spent on various products (wines, meat, fruits, etc.)
 *   **Customer Activity:** Number of purchases by channel, recency (days since last purchase)
 *   **Marketing Response:** Binary variables for acceptance of previous campaigns and the most recent campaign.
+Retrieve From (Kaggle): **https://www.kaggle.com/datasets/imakash3011/customer-personality-analysis**
 
 ## Methodology
 
