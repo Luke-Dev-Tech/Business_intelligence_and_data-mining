@@ -36,6 +36,39 @@ Retrieve From (Kaggle): **https://www.kaggle.com/datasets/imakash3011/customer-p
 *   **Log-Odds Linearity Check:** Confirmed near-linear trends for several features, supporting Logistic Regression.
 *   **Non-Linear Patterns and Interaction Effects:** Illustrated interactions between Age, Income, Recency, and Web Purchases, suggesting the value of Decision Trees.
 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cc351b16-372b-43fb-8931-a3ebc7e12123" 
+       alt="Project Preview" 
+       width="600"
+       style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+</p>
+
+<p align="center">
+  <em>Figure 1: EDA Boxplot Analysis of Min-Max</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4bd9bc33-4415-4970-94f6-431ac78e063a" 
+       alt="Project Preview" 
+       width="600"
+       style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+</p>
+
+<p align="center">
+  <em>Figure 2: EDA Boxplot Analysis of Standard Deviation</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3b5c1294-3484-4505-acce-847d0cf678df" 
+       alt="Target Variable Distribution" 
+       width="600" />
+</p>
+
+<p align="center">
+  <em>Figure 3: Target Variable Distribution</em>
+</p>
+
 ### 3. Clustering (K-Means)
 *   **Objective:** Segment customers into distinct behavioral groups.
 *   **Features:** `Income` (log-transformed and outlier-treated), `Age`, `Total_Spending`, `Total_Purchases`, `Spending_per_Purchase`.
@@ -46,6 +79,16 @@ Retrieve From (Kaggle): **https://www.kaggle.com/datasets/imakash3011/customer-p
     *   **Cluster 0:** High-income, high-spending, high-frequency purchasers.
     *   **Cluster 1:** Lower-income, low-spending, low-engagement customers.
     *   **Cluster 2:** Middle-income, moderate-spending, and oldest on average.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0e88e6f5-ac13-49dd-81ec-0e98137edb1b" 
+       alt="K-Means Clustering" 
+       width="600" />
+</p>
+
+<p align="center">
+  <em>Figure 4: K-Means Clustering</em>
+</p>
 
 ### 4. Predictive Modeling
 **Objective:** Predict customer response to marketing campaigns.
@@ -58,17 +101,70 @@ Retrieve From (Kaggle): **https://www.kaggle.com/datasets/imakash3011/customer-p
     *   **Positive Indicators:** Prior campaign acceptance, web visits, meat spending, higher education.
     *   **Negative Indicators:** High recency (inactive), presence of teenagers, married/cohabiting status, in-store purchases.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9dde8b28-b04e-4d9e-8c62-4f81ebd8a55c" 
+       alt="Cofficient in Logistic Regression" 
+       width="600" />
+</p>
+
+<p align="center">
+  <em>Figure 5: Cofficient in Logistic Regression</em>
+</p>
+
 #### b. Decision Tree
 *   **Features:** Similar to Logistic Regression, handling mixed data types intrinsically.
 *   **Training & Tuning:** Used `GridSearchCV` with `average_precision` scoring to optimize hyperparameters, including `class_weight` to manage imbalance.
 *   **Threshold Tuning:** Optimized the classification threshold on a validation set to maximize F1-score and Recall, selecting 0.7.
 *   **Interpretation:** The tree structure and feature importances revealed decision rules for response prediction. Key features included `Total_Spending`, `NumWebPurchases`, `Recency`, `MntMeatProducts`, and `Income`.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a0d78a98-cfaa-4538-ad83-69c114eb6572" 
+       alt="Decision Tree Visualization" 
+       width="600" />
+</p>
+
+<p align="center">
+  <em>Figure 6: Decision Tree Visualization</em>
+</p>
+
 ### 5. Model Comparison
 *   **Metrics:** Accuracy, Precision, Recall, F1-Score, ROC-AUC, and Confusion Matrices were used.
 *   **Performance:** 
     *   **Logistic Regression:** Achieved an ROC-AUC of 0.827, showing slightly better overall discrimination.
     *   **Decision Tree:** Achieved an ROC-AUC of 0.802. Crucially, it provided a **lift of 2.97** in response rate (44.4% vs 15.0% overall) when targeting the top 20% of customers.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5b0d4879-cbda-4b19-873e-8d53587e194a" 
+       alt="Model Comparison 1" 
+       width="600" />
+</p>
+
+<p align="center">
+  <em>Figure 7:Model Comparison 1</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/36409131-84b2-4474-aef7-b3698f31af99" 
+       alt="Model Comparison 2" 
+       width="600" />
+</p>
+
+<p align="center">
+  <em>Figure 8:Model Comparison 2</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/233206c0-0ed4-4b63-988e-80306a46ab37" 
+       alt="ROC curve comparison" 
+       width="250" height='auto'/>
+  <img src="https://github.com/user-attachments/assets/1214064a-3d80-4406-8f44-aabf8bc7e0e9" 
+       alt="ROC curve comparison" 
+       width="250" height='auto'/>
+</p>
+
+<p align="center">
+  <em>Figure 9:ROC curve comparison</em>
+</p>
 
 ## Recommendations
 
